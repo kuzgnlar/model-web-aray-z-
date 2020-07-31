@@ -10,8 +10,8 @@ Bu paket Kuzgunlar Doğal Dil İşleme modellerinin son kullanıcılar tarafınd
 
 ## :exclamation: Gereksinimler
 
- * Python 3 çalıştırabilen her hangi bir sistem yeterli.
- * Python paketlerini kurmak için pip veya benzeri bir araç. Lütfen göz [atın](https://pip.pypa.io/en/stable/installing/)
+ * Python3.4 veya daha üst bir Python sürümü.
+ * Python paketlerini kurmak için pip veya benzeri bir araç. Lütfen göz [atın](https://pip.pypa.io/en/stable/installing/).
 
 ## ⚙ Kurulum
 
@@ -20,16 +20,27 @@ Bu paket Kuzgunlar Doğal Dil İşleme modellerinin son kullanıcılar tarafınd
  ```bash 
   python3 -m pip install -r requirements.txt
 ```
+
+ :exlamation: ÖNEMLİ UYARI -- Her bir model ~450mb boyutundadır ve ilk çalıştırılma sırasında otomatik olarak indirilecektir. Bu yüzden ilk çalıştırma uzun sürebilir.
+
+ * Kurulum videosu:
+
+![animated](assets/kurulum.gif)
+
 ## :video_game: Web Arayüzünün Kullanımı
 
 Web arayüzü son kullanıcının modelleri test edip kullanabilmesi için çok kolay bir ortam sağlar.
 
- * Arayüzü çalıştırmak için tek yapmanız şu komutu çalıştırmaktır.
+ * Arayüzü çalıştırmak için tek yapmanız gereken şu komutu çalıştırmaktır.
  ```bash 
   python3 dash_app.py
 ```
  * Daha sonra Q&A ve NER modellerini http://127.0.0.1:8050 adresine tarayıcınız ile giderek kullanabilirsiniz.
- * Kuzgunlar web arayüzü https://huggingface.co/models adresinde ki diğer tüm modelleride denemenize izin vermektedir.
+ * Kuzgunlar web arayüzü https://huggingface.co/models adresindeki diğer tüm modelleri denemenize izin vermektedir.
+
+ * Kullanım videosu:
+
+![animated](assets/web_arayuz.gif)
 
 ## :video_game: Web API Kullanımı
 
@@ -63,4 +74,8 @@ Web API büyük veriler ile hızlı çalışmanız gerektiği zamanlarda işe ya
 ```
 
 Yazmanız yeterli olacaktır.
+
+ * Kullanım videosu:
+
+![animated](assets/web_api.gif)
  

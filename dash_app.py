@@ -41,7 +41,7 @@ def header():
     return \
         html.Div(id="header", className="bgimg-1 w3-display-container w3-opacity-min", children=[
             html.Div(style={'whiteSpace': 'nowrap', 'margin-top': '10vh'}, className="w3-display-topmiddle", children=[
-                html.Span(className='w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-hide-small', children='WELCOME TO MODEL TEST INTERFACE')
+                html.Span(className='w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-hide-small', children='MODEL WEB ARAYÜZÜ')
             ])
         ])
 
@@ -92,7 +92,7 @@ def modeldef():
                 html.Div(id='model_inputs', style={'height': '50vh'}, className="w3-opacity-min w3-display-container w3-col m6 w3-padding-large", children=[
                     html.Div(className='w3-display-middle', children=[
                         html.Div(className='w3-container w3-center w3-padding-large', children=[
-                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='NER MODEL'),
+                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='NER MODELİ'),
                             html.Br(),
                             dcc.Input(
                                 value='kuzgunlar/electra-turkish-ner',
@@ -101,7 +101,7 @@ def modeldef():
                         html.Br(),
                         html.Br(),
                         html.Div(className='w3-container w3-center w3-padding-large', children=[
-                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='Q&A MODEL'),
+                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='Q&A MODELİ'),
                             html.Br(),
                             dcc.Input(
                                 value='kuzgunlar/electra-turkish-qa',
@@ -122,12 +122,12 @@ def modeldef():
 def question_answer():
     return \
         html.Div(id="qa_section", className="w3-padding-large ", children=[
-            html.Div(className='w3-center w3-opacity w3-padding w3-black w3-xlarge w3-wide', children='Q&A SECTION'),
+            html.Div(className='w3-center w3-opacity w3-padding w3-black w3-xlarge w3-wide', children='Q&A BÖLÜMÜ'),
             html.Div(className="w3-row", children=[
                 html.Div(id='qa_input_sec', style={'height': '50vh'}, className="w3-opacity-min w3-display-container w3-col m6 w3-padding-large", children=[
                     html.Div(className='w3-display-middle', children=[
                         html.Div(className='w3-container w3-center w3-padding-large', children=[
-                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='CONTEXT'),
+                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='İÇERİK'),
                             html.Br(),
                             dcc.Textarea(
                                 style={'height': '130px', 'width':'400px'},
@@ -137,7 +137,7 @@ def question_answer():
                         html.Br(),
                         html.Br(),
                         html.Div(className='w3-container w3-center w3-padding-large', children=[
-                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='QUESTION'),
+                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='SORU'),
                             html.Br(),
                             dcc.Textarea(
                                 style={'height': '50px', 'width':'400px'},
@@ -159,7 +159,7 @@ def question_answer():
                                 color="dark", 
                                 id='qaGetAnswerButton',
                                 n_clicks=0,
-                                children='ANSWER',
+                                children='CEVABI BUL',
                             ),
                         ]),
                     ]),
@@ -170,12 +170,12 @@ def question_answer():
 def ner():
     return \
         html.Div(id="ner_section", className="w3-padding-large", children=[
-            html.Div(className='w3-center w3-opacity w3-padding w3-black w3-xlarge w3-wide', children='NER SECTION'),
+            html.Div(className='w3-center w3-opacity w3-padding w3-black w3-xlarge w3-wide', children='NER BÖLÜMÜ'),
             html.Div(className="w3-row", children=[
                 html.Div(id='ner_input_sec', style={'height': '50vh'}, className="w3-opacity-min w3-display-container w3-col m6 w3-padding-large", children=[
                     html.Div(className='w3-display-middle', children=[
                         html.Div(className='w3-container w3-center w3-padding-large', children=[
-                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='CONTEXT'),
+                            html.Span(className='w3-padding w3-black w3-xlarge w3-wide', children='İÇERİK'),
                             html.Br(),
                             dcc.Textarea(
                                 style={'height': '130px', 'width':'400px'},
@@ -198,7 +198,7 @@ def ner():
                                 color="dark", 
                                 id='nerGetLabelsButton',
                                 n_clicks=0,
-                                children='LABELS',
+                                children='ETİKETLERİ BUL',
                             ),
                         ]),
                     ]),
@@ -305,4 +305,4 @@ def getEntities(n_clicks, model_name, context):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
