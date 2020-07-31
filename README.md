@@ -68,11 +68,6 @@ Web API büyük veriler ile hızlı çalışmanız gerektiği zamanlarda işe ya
    curl http://127.0.0.1:5000/sentiment -H 'Content-Type: application/json' -d '{"context": "Bu ürün çok başarılı."}'
 ```
 
- Sınıflandırma (Classification) Modeli için
-  ```bash 
-   curl http://127.0.0.1:5000/classification -H 'Content-Type: application/json' -d '{"context": "Intel yeni bir işlemci tanıttı."}'
-```
-
 Yazmanız yeterli olacaktır.
 
  * Kullanım videosu:
