@@ -48,8 +48,8 @@ def header():
 def description():
     return \
         html.Div(id="description", className="w3-center w3-padding-large", children=[
-            html.P("Bu araç Kuzgunlar ekibi tarafından Teknofest Türkçe Doğal Dil İşleme yatışması için hazırlanmıştır."),
-            html.P("Amacı son kullanıcılara uygun bir Q&A ve NER test ortamı sunmaktır."),
+            html.P("Bu araç Kuzgunlar ekibi tarafından Acikhack2 Türkçe Doğal Dil İşleme yarışması için hazırlanmıştır."),
+            html.P("Amacı son kullanıcılara, uygun bir Q&A ve NER test ortamı sunmaktır."),
             html.Br(className='w3-margin-top'),
             html.P("EKİP", className='w3-margin-top'),
             html.Div(className="w3-row", children=[
