@@ -68,6 +68,13 @@ def ner():
         try:
             ner = Ner()
             entities = ner.entities(context)
+
+            for idx, e in enumerate(entities):
+                if '##' in e['word']:  # Eger kelimede ## varsa bir onceki kelime ile birlestir ve entitiy yok et
+                    e['word'] = e['word'].replace('##', '')
+                    entities[idx-1]['word'] += e['word']
+                    entities[idx]['word'] = '-33empty33-'
+
             return _corsify_actual_response(jsonify(entities))
             
         except Exception as e:

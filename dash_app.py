@@ -149,8 +149,9 @@ def question_answer():
                 html.Div(style={'height': '50vh'}, className="w3-display-container w3-col m6 w3-padding-large", children=[
                     html.Div(className='w3-display-middle', children=[
                         html.Div(className='w3-container w3-center', children=[
-                            dcc.Input(
+                            html.Textarea(
                                 style={'height': '130px', 'width':'400px'},
+                                disabled=True,
                                 id='qaAnswerInput'
                             ),
                             html.Br(),
@@ -188,7 +189,7 @@ def ner():
                     html.Div(className='w3-display-middle', children=[
                         html.Div(
                             className='w3-border',
-                            style={'height': '130px', 'width':'400px'},
+                            style={'height': '130px', 'width':'400px', 'overflow': 'scroll'},
                             id='nerLabelsTextArea'
                         ),
                         html.Br(),
@@ -262,8 +263,8 @@ def fancyNER(context, entities):
 
     # Split context from entities
     for e in entities:
-        e['word'] = e['word'].replace("##", "")  # Remove dashes if there are
-        context = context.replace(e['word'], '-ENTITIY-'+e['entity_group']+'-ENTITIY-'+e['word']+'-ENTITIY-')
+        #e['word'] = e['word'].replace("##", "")  # Remove dashes if there are
+        context = context.replace(e['word']+' ', '-ENTITIY-'+e['entity_group']+'-ENTITIY-'+e['word']+'-ENTITIY- ')
     splitted_context = context.split('-ENTITIY-')
     
     # Change entities with span element
