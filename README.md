@@ -21,7 +21,7 @@ Bu paket Kuzgunlar Doğal Dil İşleme modellerinin son kullanıcılar tarafınd
   python3 -m pip install -r requirements.txt
 ```
 
- :exlamation: ÖNEMLİ UYARI -- Her bir model ~450mb boyutundadır ve ilk çalıştırılma sırasında otomatik olarak indirilecektir. Bu yüzden ilk çalıştırma uzun sürebilir.
+ :exclamation: ÖNEMLİ UYARI -- Her bir model ~450mb boyutundadır ve ilk çalıştırılma sırasında otomatik olarak indirilecektir. Bu yüzden ilk çalıştırma uzun sürebilir.
 
  * Kurulum videosu:
 
