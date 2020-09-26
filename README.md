@@ -1,76 +1,74 @@
+
 <img src="assets/header_background.jpg" height ="38%" width="38%"></img> 
 
-# Kuzgunlar Model Web Arayüzü
+# Kuzgunlar Model Web Interface
 
 ![Python 3](https://img.shields.io/badge/Python-3-yellow.svg)
 ![Dash Plotly](https://img.shields.io/badge/Dash-1.14-turquoise.svg)
 ![GPL 3.0](https://img.shields.io/badge/license-GPLv3-red.svg)
 
-Bu paket Kuzgunlar Doğal Dil İşleme modellerinin son kullanıcılar tarafından kolayca kullanılabilmesi için hazırlanmıştır.
+This repo has been prepared so that the Kuzgunlar Turkish NLP models can be easily used by the end users.
 
-## :exclamation: Gereksinimler
+## :exclamation: Requirements
 
- * Python3.4 veya daha üst bir Python sürümü.
- * Python paketlerini kurmak için pip veya benzeri bir araç. Lütfen göz [atın](https://pip.pypa.io/en/stable/installing/).
+ * Python3.4 or higher version.
+ * [The Python Package Installer (pip)](https://pip.pypa.io/en/stable/installing/).
 
 ## ⚙ Kurulum
 
- * Öncelikle bu repoyu indirin.
- * Daha sonra requirements.txt dosyasında ismi geçen paketleri kurmak için şu komutu kullanın.
+ * Clone or download this repo
+ * Then use the following command to install the packages named in the requirements.txt file.
  ```bash 
   python3 -m pip install -r requirements.txt
 ```
 
- :exclamation: ÖNEMLİ UYARI -- Her bir model ~450mb boyutundadır ve ilk çalıştırılma sırasında otomatik olarak indirilecektir. Bu yüzden ilk çalıştırma uzun sürebilir.
+ :exclamation: IMPORTANT  - Each model is ~ 450mb in size and will be downloaded automatically during initial startup. Therefore, the first run may take a long time.
 
- * Kurulum videosu:
+ * Installation process:
 
 ![animated](assets/kurulum.gif)
 
-## :video_game: Web Arayüzünün Kullanımı
+## :video_game: Usage of the Web Interface
 
-Web arayüzü son kullanıcının modelleri test edip kullanabilmesi için çok kolay bir ortam sağlar.
+The web interface provides a very easy to use environment for the end users to test and use the models.
 
- * Arayüzü çalıştırmak için tek yapmanız gereken şu komutu çalıştırmaktır.
+ * To run the interface, all you have to do is running this command.
  ```bash 
   python3 dash_app.py
 ```
- * Daha sonra Q&A ve NER modellerini http://127.0.0.1:8050 adresine tarayıcınız ile giderek kullanabilirsiniz.
- * Kuzgunlar web arayüzü https://huggingface.co/models adresindeki diğer tüm modelleri denemenize izin vermektedir.
+ * Then you can use the Q&A and NER models by going to http://127.0.0.1:8050 with your browser.
+ * The Kuzgunlar web interface allows you to try all other models available at https://huggingface.co/models.
 
- * Kullanım videosu:
+ * Usage:
 
 ![animated](assets/web_arayuz.gif)
 
-## :video_game: Web API Kullanımı
+## :video_game: Usage of the Web API
 
-Web API büyük veriler ile hızlı çalışmanız gerektiği zamanlarda işe yaramaktadır.
+The web API is useful when you need to work fast with big data.
 
- * Arayüzü çalıştırmak için tek yapmanız şu komutu çalıştırmaktır.
+ * To run the interface, all you have to do is running this command.
  ```bash 
   python3 api.py
 ```
- * Daha sonra hangi modeli kullanmak istiyorsanız o modelin URL'ine POST isteği atmalısınız.
- * REST isteği atmak için şayet curl kullanıyorsanız:
+ * Next, you need to post a POST request to the URL of the model you want to use.
+ * If you use curl to request REST:
  
- NER Modeli için
+For NER Model:
   ```bash 
    curl http://127.0.0.1:5000/ner -H 'Content-Type: application/json' -d '{"context": "Samsun, büyükşehir statüsündeki otuz ilden biridir."}'
 ```
 
- Soru Cevap (Q&A) Modeli için
+For the Question-Answer Model:
   ```bash 
    curl http://127.0.0.1:5000/qa -H 'Content-Type: application/json' -d '{"context": "Mehteran birliği 1365 yılında kuruldu.", "question": "Mehteran ne zaman kuruldu?"}'
 ```
 
- Duygu Analizi (Sentiment Analysis) Modeli için
+For Sentiment Analysis Model:
   ```bash 
    curl http://127.0.0.1:5000/sentiment -H 'Content-Type: application/json' -d '{"context": "Bu ürün çok başarılı."}'
 ```
 
-Yazmanız yeterli olacaktır.
-
- * Kullanım videosu:
+ * Usage:
 
 ![animated](assets/web_api.gif)
- 
