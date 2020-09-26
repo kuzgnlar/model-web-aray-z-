@@ -7,14 +7,14 @@
 ![Dash Plotly](https://img.shields.io/badge/Dash-1.14-turquoise.svg)
 ![GPL 3.0](https://img.shields.io/badge/license-GPLv3-red.svg)
 
-This repo has been prepared so that the Kuzgunlar Turkish NLP models can be easily used by the end users.
+This repo is prepared so that the Kuzgunlar Turkish NLP models can be easily used by the end users.
 
 ## :exclamation: Requirements
 
  * Python3.4 or higher version.
  * [The Python Package Installer (pip)](https://pip.pypa.io/en/stable/installing/).
 
-## ⚙ Kurulum
+## ⚙ Setup
 
  * Clone or download this repo
  * Then use the following command to install the packages named in the requirements.txt file.
@@ -52,7 +52,7 @@ The web API is useful when you need to work fast with big data.
   python3 api.py
 ```
  * Next, you need to post a POST request to the URL of the model you want to use.
- * If you use curl to request REST:
+ * If you use curl for REST request:
  
 For NER Model:
   ```bash 
